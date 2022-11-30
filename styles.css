@@ -1,0 +1,22 @@
+body 
+{
+    background-color: beige;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 125px;
+    font-family: 'Apple Chancery';
+    color: green;
+    margin: 15px;
+}
+
+p
+{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    margin: 15px;
+}
