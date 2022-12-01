@@ -46,7 +46,7 @@
 
 .child-ranges 
 {
-    width: 70px;
+    width: 90px;
     align-items: center;
     cursor: pointer;
     display: inline-block;
@@ -63,13 +63,6 @@
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
-
-.noshow div {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
   
 .show {
     display: block;
@@ -83,19 +76,20 @@
 }
 
 .child-block {
-    margin: 2px 15px;
+    margin: 10px;
     align-items: center;
-    display: inline-block;
 }
 
-.child-nutrition
+.child-filter
 {
     align-items: center;
     display: inline-block;
+    margin: 3px;
 }
 
 .child-minmax 
 {
+    margin: 3px;
     align-items: center;
     display: inline-block;
     width: 60px;
