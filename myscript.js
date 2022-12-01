@@ -2,6 +2,11 @@ function myFunction() {
     document.getElementById("content").classList.toggle("show");
 }
 
+function myFunction2() {
+    document.getElementById("content2").classList.toggle("show");
+}
+
+
 const recipe_name = document.getElementById("recipe_name") 
 const cal_min = document.getElementById('cal_min') 
 const cal_max = document.getElementById('cal_max') 
