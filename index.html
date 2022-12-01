@@ -15,7 +15,6 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
-
     </head>
     
     <body class="background">
@@ -28,99 +27,6 @@
                     <input value="" type="text" id="recipe_name" class="form-control" placeholder="Recipe name..." aria-label="Recipe name" aria-describedby="basic-addon2">
                 </div>
             </div>
-        </div>
-
-
-        <!-- explicitly list all filters -->
-        <div>
-            <div class="child-block">
-                <div class="child-nutrition">Calories</div>
-                <div class="child-minmax">
-                    <div class="input-group mb-3">
-                        <input id="cal_min" value="" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="form-control" placeholder="Min" aria-label="Min" aria-describedby="basic-addon2">
-                    </div>
-                </div>
-                <div class="child-minmax">
-                    <div class="input-group mb-3">
-                        <input id="cal_max" value="" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="form-control" placeholder="Max" aria-label="Max" aria-describedby="basic-addon2">
-                    </div>
-                </div>
-            </div>
-            
-
-            <div class="child-block">
-                <div class="child-nutrition">Protein (g)</div>
-                <div class="child-minmax">
-                    <div class="input-group mb-3">
-                        <input id="protein_min" value="" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" type="text" class="form-control" placeholder="Min" aria-label="Min" aria-describedby="basic-addon2">
-                    </div>
-                </div>
-                <div class="child-minmax">
-                    <div class="input-group mb-3">
-                        <input id="protein_max" value="" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" type="text" class="form-control" placeholder="Max" aria-label="Max" aria-describedby="basic-addon2">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="child-block">
-                <div class="child-nutrition">Carbs (g)</div>
-                <div class="child-minmax">
-                    <div class="input-group mb-3">
-                        <input id="carb_min" value=""  type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="Min" aria-label="Min" aria-describedby="basic-addon2">
-                    </div>
-                </div>
-                <div class="child-minmax">
-                    <div class="input-group mb-3">
-                        <input  id="carb_max" value="" type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"  placeholder="Max" aria-label="Max" aria-describedby="basic-addon2">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="child-block">
-                <div class="child-nutrition">Fat (g)</div>
-                <div class="child-minmax">
-                    <div class="input-group mb-3">
-                        <input  id="fat_min" value="" type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"  placeholder="Min" aria-label="Min" aria-describedby="basic-addon2">
-                    </div>
-                </div>
-                <div class="child-minmax">
-                    <div class="input-group mb-3">
-                        <input  id="fat_max" value="" type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="Max" aria-label="Max" aria-describedby="basic-addon2">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        
-        <div>
-            <div class="child-block">
-                <div class="child-nutrition">Cook Time (mins)</div>
-                <div class="child-minmax">
-                    <div class="input-group mb-3">
-                        <input  id="cook_time" value=""  type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="form-control" placeholder="Max" aria-label="Max" aria-describedby="basic-addon2">
-                    </div>
-                </div>
-            </div>
-
-            <div class="child-block">
-                <div class="child-nutrition">Prep Time (mins)</div>
-                <div class="child-minmax">
-                    <div class="input-group mb-3">
-                        <input  id="prep_time" value="" type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="Max" aria-label="Max" aria-describedby="basic-addon2">
-                    </div>
-                </div>
-            </div>
-
-            <div class="child-block">
-                <div class="child-nutrition">Minimum Rating (0 to 100)</div>
-                <div class="child-minmax">
-                    <div class="input-group mb-3">
-                        <input  id="rating_min" value="" type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="Min" aria-label="Min" aria-describedby="basic-addon2">
-                    </div>
-                </div>
-            </div>
-            
         </div>
 
         
@@ -144,18 +50,101 @@
             <!-- when you click to type in range boxes, the dropdown disappears -->
             <div class="child-ranges" onclick="myFunction()">
                 <div>Nutrition</div>
-                <div id="content" class="noshow">
-                    <div>
-                        <div>Calories</div>
-                        <input type="text" placeholder="Min">
-                        <input type="text" placeholder="Max">
+                <div id="content" class="noshow" onclick="event.stopPropagation()">
+
+                    <div class="child-block">
+                        <div class="child-filter">Calories</div>
+                        <div class="child-minmax">
+                            <div class="input-group mb-3">
+                                <input id="cal_min" value="" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="form-control" placeholder="Min" aria-label="Min" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                        <div class="child-minmax">
+                            <div class="input-group mb-3">
+                                <input id="cal_max" value="" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="form-control" placeholder="Max" aria-label="Max" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <div>Protein</div>
-                        <input type="text" placeholder="Min">
-                        <input type="text" placeholder="Max">
-                    </div>                </div>
+
+                    <div class="child-block">
+                        <div class="child-filter">Protein (g)</div>
+                        <div class="child-minmax">
+                            <div class="input-group mb-3">
+                                <input id="protein_min" value="" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" type="text" class="form-control" placeholder="Min" aria-label="Min" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                        <div class="child-minmax">
+                            <div class="input-group mb-3">
+                                <input id="protein_max" value="" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" type="text" class="form-control" placeholder="Max" aria-label="Max" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="child-block">
+                        <div class="child-filter">Carbs (g)</div>
+                        <div class="child-minmax">
+                            <div class="input-group mb-3">
+                                <input id="carb_min" value=""  type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="Min" aria-label="Min" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                        <div class="child-minmax">
+                            <div class="input-group mb-3">
+                                <input  id="carb_max" value="" type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"  placeholder="Max" aria-label="Max" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="child-block">
+                        <div class="child-filter">Fat (g)</div>
+                        <div class="child-minmax">
+                            <div class="input-group mb-3">
+                                <input  id="fat_min" value="" type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"  placeholder="Min" aria-label="Min" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                        <div class="child-minmax">
+                            <div class="input-group mb-3">
+                                <input  id="fat_max" value="" type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="Max" aria-label="Max" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                    </div>
+
+                 </div>
             </div>
+
+            <div class="child-ranges" onclick="myFunction2()">
+                <div>Time/Rating</div>
+                <div id="content2" class="noshow" onclick="event.stopPropagation()">
+
+                    <div class="child-block">
+                        <div class="child-filter">Cook Time (mins)</div>
+                        <div class="child-minmax">
+                            <div class="input-group mb-3">
+                                <input  id="cook_time" value=""  type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" class="form-control" placeholder="Max" aria-label="Max" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="child-block">
+                        <div class="child-filter">Prep Time (mins)</div>
+                        <div class="child-minmax">
+                            <div class="input-group mb-3">
+                                <input  id="prep_time" value="" type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="Max" aria-label="Max" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="child-block">
+                        <div class="child-filter">Minimum Rating (0 to 100)</div>
+                        <div class="child-minmax">
+                            <div class="input-group mb-3">
+                                <input  id="rating_min" value="" type="text" class="form-control" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" placeholder="Min" aria-label="Min" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
 
             <div class="child-multchoice">
                 <form>
