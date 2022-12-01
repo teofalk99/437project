@@ -1,11 +1,20 @@
-function myFunction() {
-    document.getElementById("content").classList.toggle("show");
-}
+window.onclick = function(event) { // add event listener on window
+    // toggles showing dropdown when clicking dropdown buttons
+    if (event.target.matches('#dropdownbtn')) {
+        document.getElementById("content").classList.toggle("show");
+    }
+    if (event.target.matches('#dropdownbtn2')) { // check whether click was made outside of dropdown
+        document.getElementById("content2").classList.toggle("show");
+    }
 
-function myFunction2() {
-    document.getElementById("content2").classList.toggle("show");
+    // removes dropdown content if click anywhere else but respective dropdown buttons
+    if (!event.target.matches('#dropdownbtn')) {
+        document.getElementById("content").classList.remove("show");
+    }
+    if (!event.target.matches('#dropdownbtn2')) {
+        document.getElementById("content2").classList.remove("show");
+    }
 }
-
 
 const recipe_name = document.getElementById("recipe_name") 
 const cal_min = document.getElementById('cal_min') 
@@ -22,12 +31,50 @@ const rating_min = document.getElementById('rating_min')
 const skill = document.getElementById('skill')
 const course = document.getElementById('course')
 const sort = document.getElementById('sort')
+const error_field = document.getElementById('error')
 
 
 function check_data()
 {
     //check that inputs are proper
-    return
+    errors = []
+    if (rating_min.value && parseInt(rating_min.value) > 100)
+    {
+        errors.push("Minimum rating too high")
+    }
+    if ((cal_min.value && cal_max.value) && parseInt(cal_min.value) > parseInt(cal_max.value))
+    {
+        errors.push("Minimum calories cannot be higher than maximum")
+    }
+    if ((protein_min.value && protein_max.value) && parseInt(protein_min.value) > parseInt(protein_max.value))
+    {
+        errors.push("Minimum protein cannot be higher than maximum")
+    }
+    if ((carb_min.value && carb_max.value) && parseInt(carb_min.value) > parseInt(carb_max.value))
+    {
+        errors.push("Minimum carbohydrates cannot be higher than maximum")
+    }
+    if ((fat_min.value && fat_max.value) && parseInt(fat_min.value) > parseInt(fat_max.value))
+    {
+        errors.push("Minimum fat cannot be higher than maximum")
+    }
+
+    if (errors.length > 0)
+    {
+        error_message = "Please fix following errors: "
+
+        errors.forEach(m => {
+            error_message += (m + " - ")
+        });
+
+
+        error_field.innerHTML = error_message
+    }
+    else
+    {
+        error_field.innerHTML = ""
+        send_data();
+    }
 }
 
 
