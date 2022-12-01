@@ -20,6 +20,7 @@
     <body class="background">
         <h1 class="title">MealMaster</h1>
         <p class="description">Search for recipes!</p>
+        <div id="error" style="color:red"></div>
 
         <div align="center" class="searchbar">
             <div class="w-75 p-3">
@@ -32,7 +33,8 @@
         
 
         <div>
-            <!-- make so ingredients they select are added as little boxes with 'x' to cancel filter; like keyword searches -->
+            <!-- make so ingredients they select are added as little boxes with 'x' to cancel filter; like keyword searches 
+                 implement filtering by ingredient and cuisine if we have the time -->
             <div class="child-userinput">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Ingredient" aria-label="Ingredient" aria-describedby="basic-addon2">
@@ -46,10 +48,8 @@
             </div>
 
 
-            <!-- do dropdown or explicitly do all filters without dropdowns -->
-            <!-- when you click to type in range boxes, the dropdown disappears -->
-            <div class="child-ranges" onclick="myFunction()">
-                <div>Nutrition</div>
+            <div class="child-ranges">
+                <div id="dropdownbtn">Nutrition</div>
                 <div id="content" class="noshow" onclick="event.stopPropagation()">
 
                     <div class="child-block">
@@ -111,8 +111,8 @@
                  </div>
             </div>
 
-            <div class="child-ranges" onclick="myFunction2()">
-                <div>Time/Rating</div>
+            <div class="child-ranges">
+                <div id="dropdownbtn2">Time/Rating</div>
                 <div id="content2" class="noshow" onclick="event.stopPropagation()">
 
                     <div class="child-block">
