@@ -25,27 +25,68 @@
         <div align="center" class="searchbar">
             <div class="w-75 p-3">
                 <div class="input-group mb-3">
-                    <input value="" type="text" id="recipe_name" class="form-control" placeholder="Recipe name..." aria-label="Recipe name" aria-describedby="basic-addon2">
+                    <input style="font-size: 25px;" value="" type="text" id="recipe_name" class="form-control" placeholder="Recipe name..." aria-label="Recipe name" aria-describedby="basic-addon2">
+                    <input id="search" class="searchbtn" type="submit" value="Search">
                 </div>
             </div>
         </div>
 
         
 
-        <div>
-            <!-- make so ingredients they select are added as little boxes with 'x' to cancel filter; like keyword searches 
-                 implement filtering by ingredient and cuisine if we have the time -->
-            <div class="child-userinput">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Ingredient" aria-label="Ingredient" aria-describedby="basic-addon2">
-                </div>
-            </div>
-
-            <div class="child-userinput">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Cuisine" aria-label="Cuisine" aria-describedby="basic-addon2">
-                </div>
-            </div>
+        <div style="padding-bottom: 5px;">
+            <!-- Display top 5 (or less) as they search
+                First 5 A's when empty search bar
+            -->
+            
+            <input id="cuisine" class="cuisine" list="cuisineList" placeholder="Cuisine">
+            <datalist id="cuisineList">
+                <option value="African">
+                <option value="American">
+                <option value="Asian">
+                <option value="Australian">
+                <option value="Austrian">
+                <option value="Balinese">
+                <option value="Belgian">
+                <option value="Brazilian">
+                <option value="British">
+                <option value="Cajun & Creole">
+                <option value="Caribbean">
+                <option value="Chilean">
+                <option value="Chinese">
+                <option value="Cuban">
+                <option value="Danish">
+                <option value="Eastern European">
+                <option value="English">
+                <option value="French">
+                <option value="German">
+                <option value="Greek">
+                <option value="Hungarian">
+                <option value="Indian">
+                <option value="Indonesian">
+                <option value="Irish">
+                <option value="Italian">
+                <option value="Japanese">
+                <option value="Jewish">
+                <option value="Korean">
+                <option value="Latin American">
+                <option value="Mediterranean">
+                <option value="Mexican">
+                <option value="Middle Eastern">
+                <option value="Moroccan">
+                <option value="North African">
+                <option value="Portuguese">
+                <option value="Scandinavian">
+                <option value="Scottish">
+                <option value="Southern & Soul">
+                <option value="Spanish">
+                <option value="Swedish">
+                <option value="Swiss">
+                <option value="Thai">
+                <option value="Tunisian">
+                <option value="Turkish">
+                <option value="Vietnamese">
+            </datalist>
+            
 
 
             <div class="child-ranges">
@@ -149,11 +190,11 @@
             <div class="child-multchoice">
                 <form>
                     <label for="skill">Skill</label>
-                    <select  id="skill" name="skill" id="skill">
+                    <select  id="skill" name="skill">
                         <option value="none">Any</option>
-                        <option value="easy">Easy</option>
-                        <option value="medium">Medium</option>
-                        <option value="hard">Hard</option>
+                        <option value="Easy">Easy</option>
+                        <option value="More effort">Medium</option>
+                        <option value="A challenge">Hard</option>
                     </select>
                 </form>
             </div>
@@ -161,12 +202,17 @@
             <div class="child-multchoice">
                 <form>
                     <label for="course">Course</label>
-                    <select id="course" name="course" id="course">
+                    <select id="course" name="course">
                         <option value="none">Any</option>
-                        <option value="breakfast">Breakfast</option>
-                        <option value="lunch">Lunch</option>
-                        <option value="dinner">Dinner</option>
-                        <option value="dessert">Dessert</option>
+                        <option value="Breakfast">Breakfast</option>
+                        <option value="Brunch">Brunch</option>
+                        <option value="Lunch">Lunch</option>
+                        <option value="Dinner">Dinner</option>
+                        <option value="Main course">Main Course</option>
+                        <option value="Side dish">Side Dish</option>
+                        <option value="Dessert">Dessert</option>
+                        <option value="Snack">Snack</option>
+                        <option value="Drink">Drink</option>
                     </select>
                 </form>
             </div>
@@ -174,7 +220,7 @@
             <div class="child-multchoice">
                 <form>
                     <label for="course">Sort</label>
-                    <select id="sort" name="course" id="sort">
+                    <select id="sort" name="course">
                         <option value="none">None</option>
                         <option value="rating">Rating</option>
                         <option value="calories">Calories</option>
@@ -185,11 +231,8 @@
 
         </div>
 
+        <!-- make empty div with for loop to display results-->
 
-
-        <div class="child-search">
-            <input id="search" style="background-color: green" type="submit" value="Search">
-        </div>
 
         <script type="text/javascript" src="./myscript.js"></script>
 
