@@ -24,15 +24,25 @@
 
 .searchbar
 {
-    height: 75px;
+    height: 90px;
 }
 
+.searchbtn
+{
+    background-color: green; 
+    width: 65px;
+}
+
+
+.cuisine
+{
+    margin-right: 10px; 
+    font-size: 15px;
+}
 
 .child-userinput 
 {
     align-items: center;
-    height: 50px;
-    width: 150px;
     display: inline-block;
     margin: 5px;
 }
@@ -68,12 +78,6 @@
     display: block;
 }
 
-.child-search
-{
-    vertical-align: middle;
-    display: inline-block;
-    margin: 5px;
-}
 
 .child-block {
     margin: 10px;
