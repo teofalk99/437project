@@ -72,6 +72,7 @@
     background-color: white;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    cursor: default;
 }
   
 .show {
@@ -86,6 +87,7 @@
 
 .child-filter
 {
+    cursor: default;
     align-items: center;
     display: inline-block;
     margin: 3px;
