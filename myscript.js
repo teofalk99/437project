@@ -16,7 +16,16 @@ window.onclick = function(event) { // add event listener on window
     }
 }
 
+// adds div with ingredient
+function submit() {
+    var card = document.createElement("div");
+    card.innerHTML = "Ingredient";
+    document.body.append(card); 
+}
+// need function to remove ingredient divs on clicking their "x"
+
 const recipe_name = document.getElementById("recipe_name") 
+const cuisine = document.getElementById("cuisine")
 const cal_min = document.getElementById('cal_min') 
 const cal_max = document.getElementById('cal_max') 
 const protein_min = document.getElementById('protein_min') 
@@ -83,6 +92,7 @@ function send_data()
 
     var vals = {
         recipe_name: recipe_name.value,
+        cuisine: cuisine.value,
         cals: [cal_min.value, cal_max.value],
         protein: [protein_min.value, protein_max.value],
         carb: [carb_min.value, carb_max.value],
