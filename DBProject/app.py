@@ -9,7 +9,7 @@ app = Flask(__name__)
 mydb = mysql.connector.connect(
   host= 'localhost',
   user= 'root',
-  password='YOURPASSWORD',
+  password='Imaluigi99',
   database='Food'
 )
 
@@ -28,15 +28,13 @@ def search():
     print("RECEIVED ???")
 
     data = json.loads(request.form.get('data'))
-
-    print(data['recipe_name'])
     
-    mycursor.execute("SELECT * FROM fullRecipes WHERE title LIKE '%%pasta%%';")
+    mycursor.execute("SELECT title, rating, cookingTime,prepTime, calories, carbs, protein, fat, cusine, skillLevel, author FROM fullRecipes WHERE title LIKE '%%pasta%%';")
     myresult = mycursor.fetchall()
 
-    print(data, myresult)
+    print(myresult)
     
-    return json.dumps({'success': True, 'data': data}), 200, {"ContentType": "application/json"}
+    return json.dumps(myresult)
 
 
 
