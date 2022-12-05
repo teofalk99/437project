@@ -29,11 +29,11 @@ def add_conditions(data):
 
     if data['cooktime']:
         ipt_flag = True
-        clauses.append('cookingTime <= ' + data['cooktime'])
+        clauses.append('cookingTime <= ' + str(60 * int(data['cooktime'])))
 
     if data['preptime']:
         ipt_flag = True
-        clauses.append('prepTime <= ' + data['preptime'])
+        clauses.append('prepTime <= ' + str(60 * int(data['preptime'])))
 
     if data['minrating']:
         ipt_flag = True
@@ -41,7 +41,7 @@ def add_conditions(data):
 
     if data['skill'] != 'none':
         ipt_flag = True
-        clauses.append('skill = "' + data['skill'] + '"')
+        clauses.append('skillLevel = "' + data['skill'] + '"')
 
     if data['course'] != 'none':
         ipt_flag = True
